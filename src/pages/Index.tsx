@@ -3,6 +3,11 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 
+const IMG_TABLE = "https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/4fe6f3da-3e51-49a1-8754-e51d6c814104.jpg";
+const IMG_BENCH = "https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/56123e53-c685-4de0-b148-2ddd73991174.jpg";
+const IMG_SET = "https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/1a542373-fac4-4ccb-99e9-ac3973ad9709.jpg";
+const IMG_COFFEE = "https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/fe05550f-dc63-4af7-a361-b3a76008f09f.jpg";
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -36,7 +41,6 @@ const Index = () => {
       <section className="pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 min-h-[80vh]">
-            {/* Основной контент Hero */}
             <div className="lg:col-span-8 flex flex-col justify-center">
               <div className="space-y-8">
                 <div className="space-y-4">
@@ -54,10 +58,10 @@ const Index = () => {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="text-lg px-8">
+                  <Button size="lg" className="text-lg px-8" onClick={() => document.getElementById('catalog')?.scrollIntoView({behavior:'smooth'})}>
                     Смотреть каталог
                   </Button>
-                  <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+                  <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" onClick={() => document.getElementById('prices')?.scrollIntoView({behavior:'smooth'})}>
                     Рассчитать стоимость
                   </Button>
                 </div>
@@ -67,32 +71,16 @@ const Index = () => {
             {/* Hero сетка изображений */}
             <div className="lg:col-span-4 grid grid-cols-2 gap-2 auto-rows-fr h-fit self-center">
               <Card className="aspect-square bg-card overflow-hidden rounded-lg">
-                <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/e2b0530e-ab93-4907-9a13-4bfd7f578e3c.jpg"
-                  alt="Стол из сосны"
-                  className="w-full h-full object-cover"
-                />
+                <img src={IMG_TABLE} alt="Стол из сосны" className="w-full h-full object-cover" />
               </Card>
               <Card className="aspect-square bg-primary/20 overflow-hidden rounded-lg">
-                <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/3e85177a-9a3d-4e67-9a85-8baeff14a166.jpg"
-                  alt="Лавочка из тайги"
-                  className="w-full h-full object-cover"
-                />
+                <img src={IMG_BENCH} alt="Лавочка из тайги" className="w-full h-full object-cover" />
               </Card>
               <Card className="aspect-square bg-accent/20 overflow-hidden rounded-lg">
-                <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/d076cc5f-6625-44aa-bc0e-aed63460ceb6.jpg"
-                  alt="Мастерская"
-                  className="w-full h-full object-cover"
-                />
+                <img src={IMG_COFFEE} alt="Кофейный столик" className="w-full h-full object-cover" />
               </Card>
               <Card className="aspect-square bg-card overflow-hidden rounded-lg">
-                <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/50f0f30d-dd41-4911-8edf-dfed9ca1a2f7.jpg"
-                  alt="Комплект мебели"
-                  className="w-full h-full object-cover"
-                />
+                <img src={IMG_SET} alt="Комплект мебели" className="w-full h-full object-cover" />
               </Card>
             </div>
           </div>
@@ -112,7 +100,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-8 text-center">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Icon name="Axe" className="w-8 h-8 text-primary" />
+                <Icon name="Hammer" className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">1. Ручная работа</h3>
               <p className="text-muted-foreground">
@@ -143,20 +131,22 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Каталог — столы */}
+      {/* Каталог */}
       <section id="catalog" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-4xl font-bold">КАТАЛОГ МЕБЕЛИ</h2>
-            <Button variant="outline">Все товары</Button>
+            <Button variant="outline" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})}>
+              Заказать
+            </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Стол обеденный */}
+            {/* Стол обеденный большой */}
             <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
               <div className="aspect-video bg-primary/20 relative overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/e2b0530e-ab93-4907-9a13-4bfd7f578e3c.jpg"
+                  src={IMG_TABLE}
                   alt="Стол обеденный из сосны"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
@@ -176,11 +166,11 @@ const Index = () => {
             <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
               <div className="aspect-video bg-accent/20 relative overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/a1b9023b-d4ce-4061-b5bd-f416d37a2b78.jpg"
-                  alt="Стол кофейный"
+                  src={IMG_COFFEE}
+                  alt="Кофейный столик"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
-                <Badge className="absolute top-4 left-4" variant="secondary">
+                <Badge className="absolute top-4 left-4" variant="outline">
                   Новинка
                 </Badge>
               </div>
@@ -194,11 +184,11 @@ const Index = () => {
               </div>
             </Card>
 
-            {/* Лавочка */}
+            {/* Лавочка со спинкой */}
             <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
-              <div className="aspect-video bg-primary/20 relative overflow-hidden">
+              <div className="aspect-video bg-secondary relative overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/3e85177a-9a3d-4e67-9a85-8baeff14a166.jpg"
+                  src={IMG_BENCH}
                   alt="Лавочка из сосны"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
@@ -215,11 +205,72 @@ const Index = () => {
                 </div>
               </div>
             </Card>
+
+            {/* Стол обеденный малый */}
+            <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
+              <div className="aspect-video bg-primary/10 relative overflow-hidden">
+                <img
+                  src={IMG_TABLE}
+                  alt="Стол малый"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Стол малый «Таёжный»</h3>
+                <p className="text-muted-foreground mb-4">Массив сосны, 120×80 см, компактный</p>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-primary">18 000 ₽</div>
+                  <Button size="sm">Заказать</Button>
+                </div>
+              </div>
+            </Card>
+
+            {/* Лавочка малая */}
+            <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
+              <div className="aspect-video bg-accent/10 relative overflow-hidden">
+                <img
+                  src={IMG_BENCH}
+                  alt="Лавочка малая"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Лавочка малая «Кедровка»</h3>
+                <p className="text-muted-foreground mb-4">Массив сосны, 120 см, без спинки</p>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-primary">6 500 ₽</div>
+                  <Button size="sm">Заказать</Button>
+                </div>
+              </div>
+            </Card>
+
+            {/* Комплект */}
+            <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
+              <div className="aspect-video bg-primary/20 relative overflow-hidden">
+                <img
+                  src={IMG_SET}
+                  alt="Комплект мебели"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                />
+                <Badge className="absolute top-4 left-4 bg-accent text-accent-foreground">Скидка 10%</Badge>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Комплект «Таёжный двор»</h3>
+                <p className="text-muted-foreground mb-4">Стол 200×90 + 2 лавочки 180 см</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-2xl font-bold text-primary">38 000 ₽</div>
+                    <div className="text-sm text-muted-foreground line-through">42 200 ₽</div>
+                  </div>
+                  <Button size="sm">Заказать</Button>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Секция цен */}
+      {/* Прайс-лист */}
       <section id="prices" className="py-20 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -298,7 +349,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Секция О нас */}
+      {/* О нас */}
       <section id="about" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -323,12 +374,20 @@ const Index = () => {
                   <div className="text-3xl font-bold text-accent">1200+</div>
                   <div className="text-muted-foreground">Довольных клиентов</div>
                 </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">100%</div>
+                  <div className="text-muted-foreground">Натуральное дерево</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-accent">14 дн.</div>
+                  <div className="text-muted-foreground">Срок изготовления</div>
+                </div>
               </div>
             </div>
             <div className="relative">
               <Card className="aspect-[4/5] overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/d076cc5f-6625-44aa-bc0e-aed63460ceb6.jpg"
+                  src={IMG_SET}
                   alt="Мастерская Тайга Мебель"
                   className="w-full h-full object-cover"
                 />
@@ -347,7 +406,7 @@ const Index = () => {
             Доставка по всей России. Производство от 14 дней.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8">
+            <Button size="lg" className="text-lg px-8" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})}>
               Оставить заявку
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
@@ -400,7 +459,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2025 Тайга Мебель. Все права защищены.</p>
+            <p>&copy; 2026 Тайга Мебель. Все права защищены.</p>
           </div>
         </div>
       </footer>
