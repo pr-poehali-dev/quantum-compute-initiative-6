@@ -68,28 +68,28 @@ const Index = () => {
             <div className="lg:col-span-4 grid grid-cols-2 gap-2 auto-rows-fr h-fit self-center">
               <Card className="aspect-square bg-card overflow-hidden rounded-lg">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/85c656ec-3fd9-400f-ad26-e4de1d17b142.jpg"
+                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/e2b0530e-ab93-4907-9a13-4bfd7f578e3c.jpg"
                   alt="Стол из сосны"
                   className="w-full h-full object-cover"
                 />
               </Card>
               <Card className="aspect-square bg-primary/20 overflow-hidden rounded-lg">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/1fdcd6d9-f39f-4683-994c-5aa29b490423.jpg"
+                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/3e85177a-9a3d-4e67-9a85-8baeff14a166.jpg"
                   alt="Лавочка из тайги"
                   className="w-full h-full object-cover"
                 />
               </Card>
               <Card className="aspect-square bg-accent/20 overflow-hidden rounded-lg">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/be2849e4-9f32-46a0-bcd7-96cb154ff232.jpg"
+                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/d076cc5f-6625-44aa-bc0e-aed63460ceb6.jpg"
                   alt="Мастерская"
                   className="w-full h-full object-cover"
                 />
               </Card>
               <Card className="aspect-square bg-card overflow-hidden rounded-lg">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/5531c55d-9a63-48a0-a32a-fffe3f4dcc72.jpg"
+                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/50f0f30d-dd41-4911-8edf-dfed9ca1a2f7.jpg"
                   alt="Комплект мебели"
                   className="w-full h-full object-cover"
                 />
@@ -156,7 +156,7 @@ const Index = () => {
             <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
               <div className="aspect-video bg-primary/20 relative overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/85c656ec-3fd9-400f-ad26-e4de1d17b142.jpg"
+                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/e2b0530e-ab93-4907-9a13-4bfd7f578e3c.jpg"
                   alt="Стол обеденный из сосны"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
@@ -176,7 +176,7 @@ const Index = () => {
             <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
               <div className="aspect-video bg-accent/20 relative overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/5531c55d-9a63-48a0-a32a-fffe3f4dcc72.jpg"
+                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/a1b9023b-d4ce-4061-b5bd-f416d37a2b78.jpg"
                   alt="Стол кофейный"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
@@ -198,7 +198,7 @@ const Index = () => {
             <Card className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform">
               <div className="aspect-video bg-primary/20 relative overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/1fdcd6d9-f39f-4683-994c-5aa29b490423.jpg"
+                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/3e85177a-9a3d-4e67-9a85-8baeff14a166.jpg"
                   alt="Лавочка из сосны"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
@@ -328,7 +328,7 @@ const Index = () => {
             <div className="relative">
               <Card className="aspect-[4/5] overflow-hidden">
                 <img
-                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/be2849e4-9f32-46a0-bcd7-96cb154ff232.jpg"
+                  src="https://cdn.poehali.dev/projects/87773617-f1e7-41b5-884c-32d065a00f8f/files/d076cc5f-6625-44aa-bc0e-aed63460ceb6.jpg"
                   alt="Мастерская Тайга Мебель"
                   className="w-full h-full object-cover"
                 />
